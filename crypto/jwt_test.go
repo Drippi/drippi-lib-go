@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	testJWTKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJsZXZlbCI6MX0.xxnZlhpctgl9jsgNEmriSEuAi5F0Vw_r1yfczrqikPc"
-	testJWTUserId = float64(0)
+	testJWTKey       = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJsZXZlbCI6MX0.xxnZlhpctgl9jsgNEmriSEuAi5F0Vw_r1yfczrqikPc"
+	testJWTUserID    = float64(0)
 	testJWTUserLevel = float64(1)
 )
 
@@ -49,7 +49,7 @@ func TestValidateJWTToken(t *testing.T) {
 	}
 
 	claims := token.Claims.(jwt.MapClaims)
-	assert.Equal(t, claims[UserIdKey], testJWTUserId)
+	assert.Equal(t, claims[UserIDKey], testJWTUserID)
 	assert.Equal(t, claims[UserLevelKey], testJWTUserLevel)
 
 	_, err = ValidateJWTToken("invalid token!", JWTTestSecret)

@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+
+  install:
+    runtime-versions:
+      golang: latest
+    commands:
+      - go build ./...
+
+  pre_build:
+    commands:
+
+      # Ensure code passes all lint tests
+      - golint -set_exit_status ./...
+
+      # Run all tests included with our application
+      - go test ./...

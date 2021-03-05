@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	// UserIdKey is the key for user ID in JWT Claims mapping
-	UserIdKey = "user_id"
+	// UserIDKey is the key for user ID in JWT Claims mapping
+	UserIDKey = "user_id"
 	// UserLevelKey is the key for user level in JWT Claims mapping
 	UserLevelKey = "level"
 
