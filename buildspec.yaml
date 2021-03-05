@@ -6,6 +6,7 @@ phases:
     runtime-versions:
       golang: latest
     commands:
+      - go get -u golang.org/x/lint/golint
       - go build ./...
 
   pre_build:
