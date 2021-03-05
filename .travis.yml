@@ -1,8 +1,7 @@
 language: go
 
 go:
-  - 1.5.1
-  - release
+  - 1.16
 
 before_script:
   - go get -u golang.org/x/lint/golint
