@@ -1,0 +1,13 @@
+language: go
+
+go:
+  - 1.5.1
+  - release
+
+before_script:
+  - go get -u golang.org/x/lint/golint
+  - go build ./...
+
+script:
+  - golint -set_exit_status ./...
+  - go test -v ./...
